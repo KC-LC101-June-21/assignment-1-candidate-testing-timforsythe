@@ -50,7 +50,7 @@ function gradeQuiz(candidateAnswers) {
         console.log(`\n`);
   } 
 
-let grade = (score / questions.length) * 100;
+let grade = Number(score / questions.length) * 100;
 console.log(`>>> Overall Grade: ${grade}% (${score} of ${questions.length} responses correct) <<< `);
 
 if (grade >= 80) {
