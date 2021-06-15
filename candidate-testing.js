@@ -19,7 +19,6 @@ let correctAnswers = ["Sally Ride", "true", "40", "Trajectory", "3"];
 let candidateAnswers = [];
 
 
-
  // TODO 1.1b: Ask for candidate's name //
 function askForName() {
   candidateName = input.question("Please enter your name: ");
@@ -34,7 +33,6 @@ for (i = 0; i < questions.length; i++) {
   }
 
 }
-
 
 function gradeQuiz(candidateAnswers) {
 
@@ -54,15 +52,13 @@ function gradeQuiz(candidateAnswers) {
 let grade = Number(score / questions.length) * 100;
 console.log(`>>> Overall Grade: ${grade}% (${score} of ${questions.length} responses correct) <<< `);
 
-if (grade >= 80) {
-  console.log(`>>> Status: PASSED <<<`);
-} else {
-  console.log(`>>> Status: FAILED <<<`);
-return Number(grade);
+  if (grade >= 80) {
+    console.log(`>>> Status: PASSED <<<`);
+  } else {
+    console.log(`>>> Status: FAILED <<<`);
+  return Number(grade);
+  }
 }
-}
-
-
 
 function runProgram() {
   askForName();
