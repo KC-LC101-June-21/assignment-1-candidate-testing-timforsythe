@@ -52,15 +52,17 @@ function gradeQuiz(candidateAnswers) {
   } 
 
 let grade = Number(score / questions.length) * 100;
-console.log(`>>> Overall Grade: ${Number(grade)}% (${score} of ${questions.length} responses correct) <<< `);
+console.log(`>>> Overall Grade: ${grade}% (${score} of ${questions.length} responses correct) <<< `);
 
-if (Number(grade) >= 80) {
+if (grade >= 80) {
   console.log(`>>> Status: PASSED <<<`);
 } else {
   console.log(`>>> Status: FAILED <<<`);
 return Number(grade);
 }
 }
+
+
 
 function runProgram() {
   askForName();
